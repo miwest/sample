@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<features name='sample' xmlns='http://karaf.apache.org/xmlns/features/v1.0.0'>
+
+	<feature name='archive' version='${project.version}' install='auto'>
+		<bundle>mvn:com.miwest.sample/archive/1.0.0</bundle>
+	</feature>
+	<feature name='common' version='${project.version}' install='auto'>
+		<bundle>mvn:com.miwest.sample/common/1.0.0</bundle>
+	</feature>
+	<feature name='properties' version='${project.version}' install='auto'>
+		<bundle>mvn:com.miwest.sample/properties/1.0.0</bundle>
+	</feature>
+	<feature name='server' version='${project.version}' install='auto'>
+		<feature version='2.12.3'>camel-core</feature>
+		<feature version='2.12.3'>camel-spring</feature>
+		<feature version='2.12.3'>camel-cxf</feature>
+		<bundle>mvn:com.miwest.sample/archive/1.0.0</bundle>
+		<bundle>mvn:com.miwest.sample/common/1.0.0</bundle>
+		<bundle>mvn:com.miwest.sample/properties/1.0.0</bundle>
+		<bundle>mvn:com.miwest.sample/server/1.0.0</bundle>
+		<bundle>mvn:com.miwest.sample/thesaurus/1.0.0</bundle>
+	</feature>
+	<feature name='thesaurus' version='${project.version}' install='auto'>
+		<bundle>mvn:com.miwest.sample/thesaurus/1.0.0</bundle>
+	</feature>
+	
+</features>
